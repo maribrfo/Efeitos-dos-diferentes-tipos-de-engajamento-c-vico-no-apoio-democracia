@@ -1,0 +1,275 @@
+---
+title: 'Efeitos dos diferentes tipos de engajamento cívico no apoio à democracia: uma análise com base no ESEB 2018'
+author: "Programa de Pós-Graduação em Ciência Política (UFPE)"
+date: "Mariana Brito da Fonseca"
+output: pdf_document
+fontsize: 11pt
+geometry: margin=1in
+
+---
+
+## Introdução
+
+  Utilizando como base a figura 1.2 presente em Kellstedt e Whitten (2018), a variável independente discutida é o engajamento cívico, conceitualizada a partir de Fiorina (2001) e operacionalizada por meio da questão de participação em organizações e grupos de engajamento cívico (P02), divididos em 17 categorias, no instrumento de survey do Estudo Eleitoral Brasileiro (ESEB 2018). No modelo também é incluída a variável dependente apoio à democracia, operacionalizada a partir da questão sobre satisfação com o funcionamento da democracia no Brasil (Q21), presente no mesmo banco de dados. 
+  A teoria causal que conecta a variável dependente a variável independente primeiramente tem como base a teoria democrática normativa. Em ambos Rosanvallon (2008) e Tocqueville ([1835] 2004), formas de participação cidadã são importantes para manter a democracia funcionando. Em Acemoglu e Robinson (2019) uma sociedade cooperativa e organizada impede o surgimento de Estados despóticos. Já segundo Robert Putnam ([1993] 2006) existem evidências empíricas da importância da "comunidade cívica" no desenvolvimento de Instituições fortes.
+  A escolha da teoria causal que conecta esta variável com a variável dependente apoio à democracia está dividida em quatro argumentos. Primeiro, é importante entender a relação entre as variadas formas de engajamento cívico com o apoio à democracia, porque nem sempre o engajamento cívico acontece com base em valores democráticos, logo, o apoio à democracia pré-existente ao engajamento cidadão pode variar a depender do tipo de participação. Pode-se esperar que a atuação em determinados setores de engajamento cívico nem sempre contribui para um fortalecimento da democracia. Segundo, o apoio ao regime democrático do tipo difuso, mais ligado à concepções abstratas do que é democracia, é formado a partir da socialização infantil e da participação em espaços distintos como família, clubes sociais, sindicatos e associações de moradores, por exemplo, na fase pré-adulta e maturidade. O terceiro argumento se baseia na ideia de que o apoio difuso à democracia constitui um "reservatório de boa vontade" em relação ao regime, diminuindo os custos de implementação de decisões coletivas, o que automaticamente impacta a qualidade da democracia. Por último, o suporte popular para a democracia tem diminuído entre 2014 e 2017, o que torna mais importante estudar os aspectos que envolvem esta variável. 
+  Logo, para observar a relação entre ambas as variáveis dependente e independente, utilizo o modelo de Regressão Linear Múltipla, que busca testar a seguinte hipótese: existe diferença significativa entre as variáveis independentes (categorias de engajamento cívico) no impacto sob a variável dependente. A questão que este trabalho busca responder é: como diferentes categorias de engajamento cívico influenciam no grau de apoio à democracia?
+
+## Engajamento Cívico: definição e importância democrática
+
+  Para adquirir claridade conceitual, o que irá interferir diretamente na operacionalização das variáveis (Kellstedt e Whitten, 2018), utilizo a definição de engajamento cívico como atividades voluntárias de pessoas em suas comunidades, trabalhos, igrejas e outros contextos sociais. Essas atividades podem ser muito politizadas, totalmente não politizadas ou qualquer situação entre esses dois contextos (FIORINA, 2001). É importante salientar que essas atividades não são forçadas pelo Estado ou por interesses de mercado e que níveis altos de engajamento cívico geram capital social (Coleman, 1988, apud Fiorina, 2001).     
+  Uma sociedade civil forte é a base da democracia, como tem sido apontado pela teoria democrática normativa, contribuindo para sociedades mais saudáveis, pacíficas e prósperas. Em Rosanvallon (2008), a “counter-democracy” é uma característica importante do regime em épocas de falta de confiança no governo, este processo se dá por formas de participação cidadã que vão além das eleições. Para Tocqueville ([1835] 2004), “o país mais democrático da terra” seria o que une os cidadãos em torno de um objetivo em comum para todos, esses cidadãos iriam perseguir juntos a melhoria das suas comunidades.           
+  Já de acordo com Acemoglu e Robinson (2019), para que a liberdade tenha consequências positivas na prosperidade e no bem estar dos cidadãos, é imprescindível que haja um “Leviatã acorrentado”. Este processo ocorre quando o Estado e a sociedade estão em situação de equilíbrio, em que o Estado cria as leis, sendo pensadas e tomadas por pessoas comuns, que controlam o Estado. A sociedade precisaria se organizar e cooperar para impedir que Estados despóticos surjam, ou seja, os cidadãos devem se engajar para gerar capital social. Para que este equilíbrio aconteça, formas institucionais e outras formas de participação política devem se fortalecer entre si e funcionarem juntas, como protestos, petições, revoltas e formas institucionalizadas como assembleias e eleições. O Poder do Estado e o Poder da Sociedade devem ser crescentes de maneira equilibrada. Para esses autores, formas não institucionalizadas de participação política e cooperação nas comunidades de cidadãos são fundamentais para que o Estado possa atuar de maneira eficiente e democrática, de maneira a reduzir desigualdades e garantir o bem estar das pessoas.             
+  Segundo Robert Putnam ([1993] 2006), em seu livro que recebeu atenção de formuladores de políticas e ativistas do mundo inteiro, existem evidências empíricas da importância da "comunidade cívica" no desenvolvimento de instituições de sucesso. O foco da obra está em 1970, quando a Itália criou governos para cada uma das suas regiões. Após duas décadas analisando a eficácia desses governos em áreas como agricultura, habitação e serviços de saúde, foi possível observar que padrões de associativismo, confiança e cooperação facilitaram a boa governança e a prosperidade econômica.     
+  Sem dúvidas, é cada vez mais urgente entender quais aspectos envolvem o engajamento cívico e participação política no Brasil, considerando seus benefícios para a construção de uma democracia sólida e uma sociedade menos desigual. Existe uma vasta literatura sobre o impacto e necessidade do engajamento cívico na qualidade da democracia, assim como sobre variáveis que influenciam diretamente no aumento do engajamento cívico nos países.           
+  A confiança interpessoal é uma dessas variáveis que influenciam no aumento do engajamento cívico, sendo um facilitador para o engajamento dos cidadãos em temas de interesse público. O efeito da confiança interpessoal é condicionado por elementos motivacionais da participação (expectativas de benefícios e percepções de custos). Como é exposto no trabalho do Freire (2014), o efeito condicional da confiança varia não apenas de acordo com variáveis motivacionais, mas também conforme a categoria do engajamento. Na Ciência Política contemporânea a variável “confiança interpessoal” é vista como muito importante nas relações com engajamento cívico, porém estudos empíricos demonstram que esta variável possui um efeito fraco quando não está interagindo com outras variáveis instrumentais que influenciam no engajamento cívico, ou seja, a confiança interpessoal pode aumentar as chances de uma pessoa se engajar no provimento de bens coletivos quando aliada à percepção dos custos e expectativas dos benefícios individuais e coletivos do engajamento (motivações individuais).    
+  Outras variáveis independentes importantes e que possuem efeito no engajamento cívico são a disponibilidade de recursos para arcar com os custos da participação (Brady et al, 1995, apud Freire, 2014), a intensidade motivacional (Fiorina, 2001, apud Freire, 2014), as estruturas de oportunidades oferecidas pelas Instituições públicas (Rennó, 2003, apud Freire, 2014), disponibilidade de tempo, capacidade cognitiva, dentre outros fatores.             
+  Apesar das várias demandas de trabalho que estão sobrecarregando os americanos, Fiorina (2001) aponta que os norte-americanos têm se engajado menos politicamente por questões psicológicas, as pessoas simplesmente não se importam.             
+  Como é possível observar, a maior parte dos esforços na Ciência Política estão em entender quais variáveis impactam no aumento do engajamento cívico no país, considerando sua indubitável importância democrática. Ainda assim, se torna necessário entender qual é a relação entre as variadas formas de engajamento cívico com o grau de satisfação com a democracia enquanto regime. Como mostra Fiorina (1999, apud Freire, 2011), nem sempre o engajamento cívico acontece com base em valores democráticos, “o alto envolvimento dos cidadãos com a política pode representar sentimentos de ódio, desespero, ou outras motivações as quais não são vistas como benéficas para a manutenção de uma sociedade democrática.” Além disso, o apoio à democracia também é um indicador importante de estabelecimento do próprio regime.           
+
+## Apoio à democracia: o que influencia?   
+
+  Em Easton (1968, apud Ribeiro, 2007) é perceptível a existência de dois níveis de apoio ao regime democrático (difuso e específico). O difuso, é onde estão os valores básicos ligados à aceitação abstrata da democracia. O apoio específico é composto por fenômenos relacionados à avaliação sobre o funcionamento concreto das Instituições e da elite política. É importante salientar que o apoio difuso à democracia envolve um processo de formação de valores e atitudes favoráveis à democracia que se dão na socialização infantil, e também na fase pré-adulta e na maturidade, em espaços distintos como família, clubes sociais, sindicatos, associações de moradores, dentre outras categorias de engajamento cívico. 
+  Novamente, para adquirir claridade conceitual, o que é uma característica fundamental para uma boa operacionalização de variáveis na utilização de técnicas estatísticas, para este artigo será utilizado o conceito de apoio difuso à democracia, como apontado no parágrafo acima. Considerando que este conceito pressupõe que os respondentes possuem algum conhecimento sobre o que é democracia e quais são os seus valores. Também, a adesão abstrata à democracia é formada em processos sociais e de participação política e não é influenciada pelo apoio específico, ou seja, não está à mercê de avaliações de desempenho racionais e conscientes das Instituições e elite política (Ribeiro, 2007). 
+  De acordo com Colen (2009): “O apoio difuso à democracia é fundamental para o processo de institucionalização política, pois, apenas quando o apoio à democracia acontece de forma irrefletida e automática entre os cidadãos é possível avançar no processo de estabilização democrática. Isso significa que, quanto mais densamente se constitui um reservatório de boa vontade em relação ao regime democrático, menores serão os custos da implementação das decisões coletivas”. Logo, considerando o contexto da América Latina, e especificamente do Brasil, marcado por crises econômicas e desigualdade de renda, o apoio mencionado é fundamental para estabelecer uma democracia eficiente na implementação de Políticas Públicas e gestão de vontades coletivas. Por isso, o indicador apoio à democracia é utilizado como variável dependente, tendo em vista que não pode ser ignorado quando estudamos o avanço e qualidade da democracia.
+  No trabalho fundamental construído por Colen (2009), uma série de questões influenciam no apoio à democracia na América Latina, portanto, é importante salientar que outro conjunto de variáveis que não são objeto do presente estudo também explicam a variação na variável dependente. Como é o caso das variáveis contextuais, percepção diferenciada dos resultados políticos e econômicos e capacidade cognitiva dos indivíduos. A escolaridade, por exemplo, é um fator que está presente na categoria “capacidade cognitiva”. A educação formal seria um fator importante de impacto no apoio à democracia em países com pouca experiência democrática. Indicadores contextuais importantes são o PIB per capita, coeficiente de desigualdade, índice de oportunidade humana e um histórico positivo de políticas sociais. O trabalho de Colen (2009) também apresenta que “a resistência dos segmentos mais ricos e educados de uma sociedade em relação aos aspectos distributivos da democracia mostram a persistência de uma cultura autoritária e elitista” nos países da América Latina. 
+  É importante utilizar, ainda, outras variáveis independentes para avaliar esta causalidade. Em Ribeiro (2007), outras variáveis influenciam na avaliação das pessoas sobre o “sistema de governo” ou na legitimidade democrática, que é a variável dependente utilizada pelo autor. Nos termos das teorias realistas, que privilegiam o fato dos cidadãos serem capazes de fazerem avaliações racionais sobre o “sistema de governo” (sem utilizar o termo “democracia”), Ribeiro listou algumas variáveis independentes que se relacionam com a legitimidade democrática: percepção dos cidadãos acerca de sua atual situação econômica; medida de desempenho do regime há dez anos atrás; a expectativa do entrevistado acerca do desempenho do regime daqui a dez anos; percepção sobre a corrupção; avaliação de desempenho específica das lideranças políticas e medidas de confiança em instituições políticas e alguns de seus operadores. Ou seja, todas essas variáveis também poderiam explicar a variação da variável dependente escolhida no modelo construído no presente trabalho.
+  Em termos de representação política, podemos ter alguns conflitos quando o engajamento é dominado por pontos de vista minoritários, considerando que, ao mesmo tempo, a maior parte das pessoas comuns em uma sociedade possui pensamentos moderados. Fiorina (2008) expõe este pensamento, argumentando que apenas uma minoria é muito motivada para se engajar, e “poder para o povo” pode significar poder para minorias específicas, o que gera problemas em termos de representação política. Ou seja, nesse contexto, quanto mais engajamento e participação, menos as pessoas podem se sentir representadas. A falta do sentimento de representação política, gerado por um alto engajamento cívico, pode tanto afetar a variável dependente (Y), como a variável independente (X).
+
+## Diferentes categorias de Engajamento cívico e apoio à democracia
+
+  No Brasil, o suporte popular para a democracia tem diminuído entre 2014 e 2017, de acordo com dados do Latinobarômetro em Hunter e Power (2019). Além disso, o The Democracy Index (2020), do The Economist Intelligence Intelligence Unit, aponta o Brasil como um dos países com o valor mais baixo no indicador Cultura Política, que mensura dentre outras coisas a defesa da democracia no Brasil. Considerando a importância do indicador de apoio ao regime democrático para manter o próprio regime funcionando, para os fins deste artigo, busca-se estimar como o engajamento cívico interfere especificamente no apoio à democracia, considerando o quão instável este fator esteve ao longo do tempo.   
+  Como foi discutido por Fiorina (1999, apud Freire, 2011), o próprio engajamento pode ser motivado por sentimentos democráticos ou não, mas como podemos entender se o contrário acontece? Ou seja, o engajamento cívico poderia gerar um maior apoio à democracia? Logo, este artigo se propõe a explicar como o apoio à democracia é influenciado por ações de engajamento cívico. Espero observar uma relação positiva entre ambas as variáveis, considerando a discussão levantada anteriormente sobre a importância da variável independente para a manutenção dos regimes democráticos. 
+  As questões expostas acima são importantes, pois buscam auxiliar o poder público e sociedade civil organizada a construírem estratégias para uma maior participação das pessoas nas questões que envolvem a sua comunidade e cidade, de maneira a incentivar a democracia. Para isso, é importante entender, acima de tudo, quais diferentes ações de engajamento cívico podem de fato influenciar no apoio à democracia, sem esquecer que as pessoas já podem ter seus sentimentos democráticos ou não bem definidos uma vez que se engajam. Com este artigo espera-se oferecer recursos para entender quais tipos de engajamento cívico é importante manter, e quais precisam receber mais atenção com vistas a torná-los práticas mais democráticas. A questão que este trabalho busca responder é: como diferentes categorias de engajamento cívico influenciam no grau de apoio à democracia? 
+  Logo, espera-se testar a hipótese:
+H1: existe diferença significativa entre as variáveis independentes (categorias de engajamento cívico) no efeito sobre a variável dependente.
+H0: não existe diferença significativa entre as variáveis independentes (categorias de engajamento cívico) no efeito sobre a variável dependente. 
+
+## Operacionalização das variáveis 
+
+  A intenção do artigo é utilizar uma variável dependente (Y) já existente - o apoio à democracia - e propor uma nova forma de utilização de variáveis independentes (X) que podem explicar a variação em Y (Kellsted, e Whitten, 2018, p.36) sendo X categorias de engajamento cívico, operacionalizadas nos seguintes indicadores: filiação a sindicato (P204); filiação a partido político (D5_2); participação em associação de moradores ou sociedade de amigos de bairro(P201); participação em associação de defesa do consumidor (P202); participação em grupo de defesa do meio ambiente (P203); participação em grêmio, centro acadêmico ou união de estudantes (P205); participação em igreja ou movimento religioso (P206); participação em grupo ou associação de assistência social (P207); participação em centro cultural, associações culturais ou algum tipo de movimento cultural (P208); participação em conselhos de saúde (P209); participação em conselhos de educação (P210); participação em associações de Pais e Mestres(P211); participação em Conselhos de Cultura (P212); participação em Conselhos de Segurança Publica (CONSEGs) (P213); participação em Conselhos tutelares (P214); participação em Movimento de defesa dos direitos de minorias (mulheres, negros, LGBTQIA+) (P215); participação em Reuniões do Orçamento Participativo (P216); e participação em grupos virtuais de discussão política no twitter, whatsapp ou facebook (P217). 
+  Para garantir a validade na operacionalização das variáveis independentes, é importante salientar o trabalho fundamental de Rennó e José Bernardo (2007) sobre engajamento cívico. De acordo com os autores, podemos considerar engajamento cívico também como ativismo político, mas nunca reduzir o engajamento cívico apenas ao ativismo político. Existem três classes de engajamento cívico. A primeira classe se relaciona com grupos de jovens, grupos de esporte e grupos culturais. A segunda, por sua vez, se resume à associação de pais, associação de vizinhos e grupos de igreja, por exemplo, onde “negócios com problemas em comum são a chave principal”. Por fim, a terceira classe está ligada diretamente à partidos políticos e grupos de trabalho, onde há sintonia político-partidária e ideológica. As variáveis independentes (X) listadas traduzem exatamente as classes que os autores sugerem, representando a precisão com que o conceito está sendo mensurado e garantindo a validade na operacionalização dos conceitos teóricos em variáveis empíricas (Kellstedt e Whitten, 2018). Em termos de confiabilidade, devemos responder à pergunta: esta mesma forma de medir engajamento cívico no ESEB 2018 já foi utilizada em outras pesquisas? Além de considerarmos se podemos utilizar a mesma medida com a mesma população em períodos de tempo diferentes e produzir resultados confiáveis. Considerando o próprio Estudo Eleitoral Brasileiro (ESEB), a pesquisa realizada em 2010 faz uma mensuração conceitual de engajamento cívico parecida, porém apenas considerou associações à sindicatos, associação profissional, associação de empresários ou comerciantes e movimentos sociais. No ESEB 2014 também houve alguma adaptação na mensuração dos indicadores que serão utilizados nesta pesquisa. Logo, pode-se dizer que o instrumento de survey foi modificado ao longo do tempo para medir engajamento cívico, porém continuam com formas muito semelhantes de mensurar o mesmo conceito.
+  A variável engajamento cívico já foi mensurada por autores como Freire (2014) com os indicadores: participação em partidos políticos; participação em protestos e participação em associações voluntárias. 
+  A variável dependente (Y) apoio a democracia é operacionalizada a partir da variável Q21 do banco de dados do Estudo Eleitoral Brasileiro de 2018, em que o respondente escolhe uma das afirmações da escala que vai de 1 a 5: "Muito satisfeito(a)"; "Satisfeito(a)"; "Nem satisfeito(a), nem insatisfeito(a) (espontânea)"; "Pouco satisfeito(a)"; "Nada satisfeito(a)" e "não sabe/não respondeu" que são opções espontâneas. O(a) respondente é perguntado(a) "De uma maneira geral, o(a) sr(a) está muito satisfeito(a), satisfeito(a), pouco satisfeito(a) ou nada satisfeito(a) com o funcionamento da democracia no Brasil?". Esta questão e suas variações são bastante utilizadas em várias pesquisas de survey, o que garante a sua confiabilidade.
+  De acordo com Ribeiro (2017) existem variações na mensuração de apoio à democracia, a forma que é mensurada no presente trabalho está mais próxima da mensuração clássica, ou seja, que mede se o(a) cidadão(ã) apoia ou não o regime com base no conhecimento dos valores abstratos da democracia, formados ao longo da vida do cidadão. Porém, é importante salientar que em países em que a história da democracia é recente, o público possui pouca compreensão do que são os valores democráticos e do próprio conceito de democracia. Além disso, assegurar que as pessoas terão clareza sobre o termo é questionável até em países com longo histórico democrático. Portanto, existem outras formas de mensurar o “apoio à democracia”, onde no texto de Ribeiro (2017) o termo é intercambiável para “legitimidade democrática”. Para mensurar a legitimidade democrática, no lugar de medir se alguém está satisfeito com a democracia ou não, o autor testa uma abordagem realista, que diferentemente da abordagem que privilegia o "apoio difuso à democracia", dá mais atenção à avaliação das pessoas sobre a situação do regime. A questão utilizada para diminuir a imprecisão é “As pessoas têm diferentes visões sobre o sistema de governo deste país. Aqui temos uma escala que mede como as coisas vão: 1 significa muito ruim; 10 significa muito bom. Onde nesta escala você colocaria o sistema político que existe hoje?”, retirada do World Values Survey (WVS). 
+  Em termos de validade na operacionalização da variável apoio à democracia, outras questões presentes no ESEB 2018 poderiam ser mais precisas para a utilização em um modelo de regressão, ainda assim, as opções disponíveis não se encaixam no critério de medida numérica, obrigatório para a escolha de uma variável dependente. Por exemplo, a questão P08 é descrita como "Algumas pessoas dizem que a democracia é sempre melhor que qualquer outra forma de governo. Para outros, em algumas situações é melhor uma ditadura do que uma democracia. Qual destas afirmações é mais parecida com sua forma de pensar?", com as opções "1 ( ) A democracia é sempre melhor que qualquer outra forma de governo" e "2 ( ) Em algumas situações é melhor uma ditadura do que uma democracia". Esta questão poderia mensurar de maneira mais precisa o grau de "apoio à democracia", porém é uma variável categórica, logo, inadequada. Portanto, para os fins deste trabalho, a variável Q21 será utilizada, considerando que o "grau de insatisfação" com democracia pode indicar indiretamente um apoio mais forte ou mais fraco ao regime democrático. 
+  Considerando o nível de Educação formal como um aspecto importante relacionado ao apoio à democracia (Colen, 2009), utilizo o indicador D3_ESCOLA como variável de controle. O indicador busca mensurar a escolaridade dos respondentes, possuindo 10 categorias que vão desde “Analfabeto/ Nunca frequentou escola” até “Pós-graduação ou mais”. A variável renda (D9) também será utilizada como variável de controle. 
+  O Estudo Eleitoral Brasileiro (ESEB) possui como objetivo manter uma medida sistemática e longitudinal do comportamento político brasileiro através das eleições, que consta a opinião brasileira sobre os mais diversos aspectos políticos e socioeconômicos. Desenvolvido a partir de pesquisas de survey, é um projeto vinculado ao Comparative Study of Electoral Systems Project (CSES), coordenado pela Universidade de Michigan. Para este trabalho, utilizarei a quinta onda do Estudo (banco de dados de 2018).
+  Resumidamente, o artigo pretende mensurar através de Regressão Linear Múltipla o efeito de diferentes categorias de engajamento cívico (VIs) sobre o grau de apoio à democracia (VD), a partir das respostas do Estudo Eleitoral Brasileiro - ESEB 2018. Com isso será possível estimar quais ações possuem maior impacto no apoio ao regime democrático, e sugerir novas possibilidades de atuação e de pesquisas quantitativas na temática.
+
+## Metodologia 
+  O banco ESEB 2018 está disponbilizado não só no site do Centro de Estudos de Opinião Pública (CESOP), mas também no github do professor Rodrigo Martins da Silva, da Universidade Federal de Pernambuco, de onde obtenho acesso para a realização deste trabalho. A pesquisa ESEB 2018 foi realizada através de entrevistas face a face entre 10 e 24 de Novembro de 2018, com uma amostra de 2506 casos. O universo da amostra é de eleitores de 16 anos ou mais, representando as 5 regiões do Brasil. 
+```{r}
+library(haven)
+library(tidyverse)
+library(lmtest)
+library(car)
+library(sandwich)
+url <- "https://github.com/MartinsRodrigo/Analise-de-dados/raw/master/04622.sav"
+
+download.file(url, "banco.sav", mode = "wb")
+ESEB2018 <- read_sav("banco.sav") %>% mutate_all(zap_label)
+```
+  As variáveis utilizadas são: grau de satisfação com a democracia (Q21); categorias de engajamento cívico (P201, P202, P203, P204, P205, P206, P207, P208, P209, P210, P211, P212, P213, P214, P215, P216, P217) e filiação a partido político (D5_2). Todas as variáveis independentes são categóricas. A variável dependente Q21 será tratada enquanto uma escala numérica. Também será utilizada a variável renda (D9) e Educação formal (D3_ESCOLA) como controles, que são variáveis numérica e categórica, respectivamente. 
+```{r}
+ESEB2018_2 <- ESEB2018 %>%
+  select (P201, P202, P203, P204, P205, P206, P207, P208, P209, P210, P211, P212, P213, P214, P215, P216, P217, D5_2, D3_ESCOLA, D9, Q21) %>%
+  filter(Q21 <=5,
+         P201<=2,
+         P202 <=2,
+         P203<=2,
+         P204<=2,
+         P205<=2,
+         P206<=2,
+         P207<=2,
+         P208<=2,
+         P209<=2,
+         P210<=2,
+         P211<=2,
+         P212<=2,
+         P213<=2,
+         P214<=2,
+         P215<=2,
+         P216<=2,
+         P217<=2,
+         D5_2<=2, 
+         D9 < 9999998) %>%
+  mutate(P201 = as.factor(P201),
+         P202 = as.factor(P202),
+         P203 = as.factor(P203), 
+         P204 = as.factor(P204),
+         P205 = as.factor(P205),
+         P206 = as.factor(P206),
+         P207 = as.factor(P207),
+         P208 = as.factor(P208),
+         P209 = as.factor(P209),
+         P210 = as.factor(P210),
+         P211 = as.factor(P211),
+         P212 = as.factor(P212),
+         P213 = as.factor(P213),
+         P214 = as.factor(P214),
+         P215 = as.factor(P215),
+         P216 = as.factor(P216),
+         P217 = as.factor(P217),
+         D3_ESCOLA = as.factor(D3_ESCOLA),
+         D5_2 = as.factor (D5_2))
+
+```
+  Analisando graficamente a variável dependente (Q21), que mede o grau de satisfação com o regime democrático, onde "1" é "Muito satisfeito(a)", "2" é "Satisfeito(a)", "3" é "Nem satisfeito(a), nem insatisfeito(a), "4" é "Pouco satisfeito(a)" e "5" é "Nada satisfeito(a), podemos observar que a maior parte dos casos se identifica com a opção "Pouco satisfeito(a)", seguida da opção "Nada satisfeito". Por conta da natureza da variável (escala numérica), é possível utilizar uma Regressão Linear Múltipla. 
+```{r}
+ggplot(ESEB2018_2,aes(x=Q21)) + 
+   geom_histogram()
+
+ggplot(ESEB2018_2, aes(x=Q21)) +
+  geom_density(alpha = 0.3)
+``` 
+  A fim de analisar o grau de associação entre cada uma das categorias de engajamento cívico e apoio à democracia por meio da comparação de médias utilizarei o teste T. Como aponta a literatura, é esperado encontrar uma relação positiva entre engajamento cívico e apoio ao regime democrático, ainda assim, com o teste T será possível analisar isoladamente quais associações são estatisticamente significativas. 
+```{r}
+t.test(Q21 ~ P201, data = ESEB2018_2)
+t.test(Q21 ~ P202, data = ESEB2018_2)
+t.test(Q21 ~ P203, data = ESEB2018_2)
+t.test(Q21 ~ P204, data = ESEB2018_2)
+t.test(Q21 ~ P205, data = ESEB2018_2)
+t.test(Q21 ~ P206, data = ESEB2018_2)
+t.test(Q21 ~ P207, data = ESEB2018_2)
+t.test(Q21 ~ P208, data = ESEB2018_2)
+t.test(Q21 ~ P209, data = ESEB2018_2)
+t.test(Q21 ~ P210, data = ESEB2018_2)
+t.test(Q21 ~ P211, data = ESEB2018_2)
+t.test(Q21 ~ P212, data = ESEB2018_2)
+t.test(Q21 ~ P213, data = ESEB2018_2)
+t.test(Q21 ~ P214, data = ESEB2018_2)
+t.test(Q21 ~ P215, data = ESEB2018_2)
+t.test(Q21 ~ P216, data = ESEB2018_2)
+t.test(Q21 ~ P217, data = ESEB2018_2)
+t.test(Q21 ~ D5_2, data = ESEB2018_2)
+```
+  Como é possível observar, utilizando como parâmetro de significância estatística p-valores < 0.05, as categorias de engajamento cívico "Filiação a partido político" (D5_2), "Conselhos de Cultura" (P212) e "Reuniões do Orçamento Participativo" (P216) são as que possuem os menores p-valores, logo, podemos rejeitar a hipótese nula de que não existe associação entre cada uma dessas categorias e apoio à democracia (Q21). A categoria "Grupos virtuais de discussão política no twitter, whatsapp ou facebook" (P217) também é significativa a partir do parâmetro <0.1 (p-valor). Com este teste, é possível observar que apenas algumas categorias de engajamento cívico estão associadas com a variável dependente. 
+   Graficamente, é possível observar as variáveis que são estatisticamente significativas na associação com a variável dependente:
+```{r}
+ggplot(ESEB2018_2, aes(Q21, fill = P212)) +
+  geom_density(alpha = 0.3)
+ggplot(ESEB2018_2, aes(Q21, fill = P216)) +
+  geom_density(alpha = 0.3)
+ggplot(ESEB2018_2, aes(Q21, fill = D5_2)) +
+  geom_density(alpha = 0.3)
+ggplot(ESEB2018_2, aes(Q21, fill = P217)) +
+  geom_density(alpha = 0.3)
+
+``` 
+  A maior parte dos fenômenos sociais possuem mais de uma causa, por isso, é importante utilizar a Regressão Múltipla, pois através desta técnica é possível controlar estatisticamente todas as possíveis causas da variável dependente, ao contrário de uma Regressão Bivariada (Kellstedt e Whitten, 2018). No modelo de regressão que utilizarei a seguir, limitarei as análises à uma variável independente: engajamento cívico. Porém, esta variável está dividida em múltiplas categorias, por isso, utilizo uma Regressão Múltipla. É importante frisar mais uma vez que existem vários fatores, conhecidos e desconhecidos, que possuem efeito sob a variável dependente apoio à democracia, mas nesse modelo busco observar a relação entre apoio à democracia e engajamento cívico e suas categorias.
+```{r}
+regressao <- lm(Q21 ~ P201 + P202 + P203 + P204 + P205 + P206 + P207 + P208 + P209 + P210 + P211 + P212 + P213 + P214 + P215 + P216 + P217 + D5_2 + D9 + D3_ESCOLA, data = ESEB2018_2)
+summary(regressao)
+```
+  Interpretando o resultado da regressão acima, é possível discutir cada componente da regressão:
+- Intercepto: este componente tem alta significância estatística, o que significa que caso todas as variáveis independentes sejam 0 (com exceção das variáveis de controle), o valor médio de satisfação com a democracia é 3.02. Logo, temos confiança em rejeitar a hipótese nula de que o coeficiente é igual a 0. 
+- P-valores: como é possível observar, apenas 5 variáveis independentes possuem significância estatística. As variáveis P202, P212 e P215 são significativas em um parâmetro < 0.05 para os p-valores. A variável P216 é significativa a um parâmetro de < 0.1 e a variável D5_2 é significativa a um parâmetro de < 0.001. Aqui temos duas observações, a primeira é que muitas categorias não chegam a ser estatisticamente significantes (utilizando como parâmetro para os p-valores <0.001, <0.05 e <0.1), a segunda é que das categorias que são significativas, o grau de significância pode variar a depender do parâmetro utilizado, sendo a variável "filiação a partidos" (D5_2) com maior significância estatística, seguida das variáveis "associação de defesa do consumidor"(P202), "conselhos de cultura"(P212) e "movimento de defesa dos direitos de minorias (mulheres, negros, LGBT)" (P215).
+- Coeficientes: a interpretação e análise dos coeficientes se dará apenas para aqueles com significância estatística nos parâmetros < 0.05, < 0.1 e < 0.001. 
+
+É possível observar que a cada resposta "não" na variável "Associação de defesa do consumidor" (P202), temos uma variação de -3.53 na escala de insatisfação com a democracia (Q21), ou seja, a cada uma unidade de não participação em associações de defesa do consumidor, mais satisfeito(a) com a democracia, controlando pelas outras variáveis independentes. 
+
+Na variável "Conselhos de Cultura" (P212), é possível observar uma variação de 3.23 na variável dependente, controlando pelas outras variáveis independentes. Isto significa um efeito de maior insatisfação com a democracia, a cada resposta negativa na categoria "Conselhos de Cultura".
+
+Com a variável de participação em "Movimento de defesa dos direitos de minorias (mulheres,negros, LGBT)" (P215) é possível observar, a cada resposta negativa, uma variação de -2.51 na variável dependente, com algum efeito em uma maior satisfação com a democracia. 
+
+Na variável participação em "Reuniões do Orçamento Participativo" (P216), a cada não como resposta, temos uma variação de 2.32 na variável dependente, o que indica um efeito de maior insatisfação com a democracia, controlando pelas outras variáveis independentes. 
+
+Na variável "filiação a partidos políticos" (D5_2), a cada resposta negativa, é possível observar uma variação de 4.01 na variável dependente, controlando pelas outras variáveis independentes.
+
+- Erro padrão: o erro previsto é de 1.064 na escala de insatisfação com a democracia, indicando que em média os valores observados no grau de insatisfação com a democracia se distanciam da reta relativa as observações preditas na mesma variável em 1.064.
+- R quadrado: o modelo explica cerca de 2% na variação da varivável dependente. Em comparação com o valor do R quadrado ajustado, é possível observar que os valores diferem bastante, o que pode indicar um erro de adequação do modelo.
+
+  Representando graficamente os coeficientes estimados, é possível observar que os intervalos de confiança das variáveis P202, P212, P215 e D5_2 não tocam o eixo 0, o que pode indicar que elas possuem algum efeito sob a variável dependente. É importante observar que a variável considerada a partir de um parâmetro menos rigoroso de significância estatística, ou seja, o indicador "Reuniões do Orçamento Participativo" (P216) tem a linha que toca no ponto 0 do gráfico, contrariando qualquer estimativa de que esta variável poderia causar algum efeito sob a variável dependente. 
+  As variáveis que possuem maior impacto são as variáveis que estão mais distantes do eixo 0, são elas: filiação a partidos políticos (D5_2) e associação de defesa do consumidor (P202), respectivamente.  
+  Utilizando o mesmo gráfico, é possível observar que quanto mais estreito for o intervalo de confiança (representado pelas linhas dos coeficientes), maior é a probabilidade da porcentagem da população de estudo representar o número real da população de origem dando maior certeza quanto ao resultado do objeto de estudo, o que acontece com a variável "filiação a partidos políticos" (D5_2).     Ainda interpretando os gráfico abaixo, é possível observar uma diferença significativa entre as variáveis Associação de defesa do consumidor (P202) e Conselhos de Cultura (P212), ambas possuem direções diferentes em relação à variável dependente e também possuem intervalos de confiança que não se sobrepõem. O mesmo acontece com Movimento de defesa dos direitos de minorias (mulheres,negros, LGBT) (P215) e filiação a partidos políticos (D5_2); filiação a partidos políticos (D5_2) e Associação de defesa do consumidor (P202); Conselhos de Cultura (P212) e Movimento de defesa dos direitos de minorias (mulheres,negros, LGBT) (P215). 
+  A partir desta interpretação, temos confiança em rejeitar a hipótese nula de que não existe diferença significativa entre as variáveis independentes (categorias de engajamento cívico) no efeito sobre a variável dependente.
+```{r}
+library(sjPlot)
+
+plot_model(regressao, type = "std")
+```
+  Também, através da função confit é possível observar os valores de onde se iniciam e de onde terminam cada intervalo. 
+
+```{r}
+confint(regressao)
+```
+
+## Interação entre variáveis
+  Como discutido anteriormente pela literatura, o engajamento cívico é condicional à renda. Realizando a interação entre a variável renda (D9) e a variável filiação a partidos políticos (D5_2), é possível observar que a linha vermelha (que representa pessoas filiadas a partidos políticos) e a linha azul (que representa pessoas não filiadas a partidos políticos) possuem direções opostas. A linha vermelha demonstra que quanto maior a renda de quem é filiado, maior a insatisfação com a democracia. A linha azul, por sua vez, indica que quanto menor a renda de quem não é filiado a partidos políticos, maior a satisfação com a democracia. Apesar das tendências apresentadas, a diferença entre as duas retas não é significativa pois os intervalos de confiança de ambas as variáveis (D5_2 e D9) estão sobrepostos. 
+```{r}
+regressao_interacao <- lm(Q21 ~ P201 + P202 + P203 + P204 + P205 + P206 + P207 + P208 + P209 + P210 + P211 + P212 + P213 + P214 + P215 + P216 + P217 +  D9*D5_2 + D9 + D3_ESCOLA, data = ESEB2018_2)
+summary(regressao_interacao)
+plot_model(regressao_interacao, type = "pred", terms = c("D9","D5_2"), data = ESEB2018_2)
+```
+
+## Análise do cumprimento dos pressupostos do modelo estimado 
+
+  De acordo com Figueiredo et al (2011) existem dez pressupostos que devem ser satisfeitos para que a análise de regressão de mínimos quadrados ordinários seja adequadamente utilizada. São eles (1) Linearidade dos parâmetros; (2) variáveis medidas adequadamente; (3) a expectativa da média do termo de erro é igual a zero; (4) homocedasticidade; (5) ausência de autocorrelação entre casos; (6) a variável independente não deve ser correlacionada com o termo de erro; (7) nenhuma variável teoricamente relevante para explicar Y foi deixada de fora do modelo e nenhuma variável irrelevante para explicar Y foi incluída no modelo; (8) não multicolinearidade; (9) o termo de erro possui uma distribuição normal e (10) há uma adequada proporção entre o número de casos e o número de parâmetros estimados. 
+  No pressuposto da homocedasticidade (homogeneidade da variância), no gráfico abaixo, é esperado que os resíduos variem uniformemente onde se vê uma linha horizontal. Esses critérios não são cumpridos, o que demonstra que deve-se rejeitar a hipótese nula de que existe homocedasticidade. 
+```{r}
+plot(regressao, 3)
+```   
+  Realizando a correção das estimativas do modelo, é possível observar que uma quantidade menor de variáveis estão estatisticamente significativas. A variável Reuniões do Orçamento Participativo (P216) que é não significativa a partir da interpretação do gráfico sjPlot também foi retirada na correção, reduzindo a um total de 4 variáveis estatisticamente significantes. Dessas variáveis, seus respectivos graus de significância também foram reduzidos. 
+```{r}
+library(sandwich)
+coeftest(regressao,
+         vcov = vcovHC(regressao, type = "HC3"))
+```
+  A seguir, alguns outros pressupostos serão testados. O primeiro deles é o pressuposto da linearidade dos parâmetros. Isto significa que a relação entre as variáveis independentes e a variável dependente deve ser aproximar de uma função linear, ou seja, a diferença entre os parâmetros estimados e os parâmetros observados deve ser pequena. Uma forma de mensurar este pressuposto é através do seguinte gráfico: 
+```{r}
+plot(regressao, 1)
+```
+  Como é possível observar, o gráfico demonstra que apesar da linha vermelha estar próxima da linha tracejada que cruza o eixo Y no valor 0, os pontos não estão distribuídos simetricamente ao redor da linha. Logo, o pressuposto da linearidade não é satisfeito. 
+  Testando a presença do pressuposto de ausência de autocorrelação entre casos, que garante que as observações são independentes, é possível observar que todas as linhas verticais estão presentes no intervalo entre as linhas azuis tracejadas horizontais. No durbinWatsonTest() é possível observar que o valor do D-W Statistic está entre 1.5 e 2.5, sendo um valor que corresponde a não existência de autocorrelação. O p-valor também é alto, de forma que não se deve rejeitar a hipótese nula de que não existe autocorrelação. 
+  
+```{r}
+acf(regressao$residuals)
+durbinWatsonTest(regressao)
+```
+  Para identificar a existência da multicolinearidade, é importante observar os intervalos de confiança e a presença de alta correlação entre variáveis independentes. Uma das maneiras de verificar a existência da multicolinearidade no modelo é através do Variance Inflation Factor (VIF). Os VIFs representados abaixo apresentam valor próximo de 1, logo a multicolinearidade não existe. 
+```{r}
+library (car)
+vif (regressao) 
+```
+  No teste de normalidade dos resíduos, o p-valor é baixo, logo, devemos rejeitar a hipótese nula de que existe normalidade entre os resíduos. 
+```{r}
+library(MASS)
+sresid <- studres(regressao)
+shapiro.test(sresid)
+```
+  Também é possível observar através do gráfico a não normalidade dos resíduos, tendo em vista que os pontos não estão próximos da linha diagonal e não estão simetricamente distribuídos.  
+```{r}
+plot(regressao, 2)
+```
+  
+## Conclusão
+  Considerando os dados utilizados, é possível observar que alguns indicadores inicialmente já apresentam alguma associação significativa com a variável dependente. O que é o caso das categorias: filiação a partido político; conselhos de cultura; grupos virtuais de discussão política no twitter, whatsapp ou facebook; e reuniões do orçamento participativo. Aliado a isto, a interpretação dos resultados da regressão também demonstram um valor significativo no efeito das variáveis: filiação a partido político; conselhos de cultura e reuniões do orçamento participativo; juntamente com os indicadores de associação de defesa do consumidor e de movimento de defesa dos direitos de minorias (mulheres, negros, LGBT). Analisando o gráfico sjPlot e as correções do modelo, no entanto, o indicador que representa as reuniões do orçamento participativo não se mostra tão significativo. Ainda conforme o gráfico, as variáveis “associação de defesa do consumidor” e “filiação a partidos” são as que possuem uma variação maior sobre a variável dependente, também existe uma diferença significativa entre as variáveis que são significantes, uma vez analisados os intervalos de confiança no gráfico.
+  Logo, essas informações nos levam a rejeitar a hipótese nula de que não existe diferença significativa no impacto das variáveis independentes (categorias de engajamento cívico) sobre a variável dependente.
+	Em termos substantivos, os resultados indicam que não devemos tratar o engajamento cívico sem considerar os diferentes tipos de engajamento cívico e seus efeitos isolados sobre a escala de insatisfação com a democracia. Logo, para o desenvolvimento teórico das pesquisas em Ciência Política, é fundamental dar mais atenção, em específico, às particularidades de cada tipo de engajamento cívico. 
+	No teste dos pressupostos do modelo de Regressão Linear Múltipla, é possível observar que o modelo cumpre com os pressupostos da não multicolinearidade e da ausência de autocorrelação entre os casos. Respectivamente, a ausência da multicolinearidade garante que mais informação estará disponível para a estimação dos coeficientes, e o pressuposto de ausência de autocorrelação entre os casos garante a independência das observações. Por outro lado, os pressupostos da homocedasticidade, linearidade dos parâmetros e normalidade dos resíduos não são satisfeitos. A violação do pressuposto de homocedasticidade afeta a confiabilidade dos testes de significância e intervalos de confiança (Figueiredo et al, 2011). A aplicabilidade do modelo é baixa pois a relação entre as variáveis se distancia de uma relação linear. Por último, a não normalidade dos resíduos compromete a razoabilidade em se estimar a média condicional de y a partir de x. 
+	Entendendo os valores do R2 e R2 ajustado, é possível observar o baixo grau de explicação ou inadequação do modelo proposto. Isso é esperado porque o modelo utiliza apenas indicadores de engajamento cívico para a explicação da variável dependente, tendo em vista que existem outras variáveis com maior peso explicativo. Logo, o modelo utilizado possui uma especificação inadequada, aumentando o erro padrão e a ineficiência nos estimadores.  Mesmo assim, é importante salientar que o "R2 é a razão da variação explicada em relação à variação total; assim, é interpretado como a fração da variação da amostra em y que é explicada por x" (Wooldridge, 2009 apud Figueiredo et al, 2011), e o presente trabalho busca apenas analisar os diferentes efeitos das variáveis independentes sobre a variável dependente. 
+	O presente trabalho possui algumas limitações. A primeira delas é a de que apesar do modelo possuir variáveis estatisticamente significativas, existe um contexto limitado de explicação do efeito sobre a variável dependente, porque a descrição da escala numérica de insatisfação com a democracia demonstra uma concentração de respostas nos valores “pouco satisfeito(a)” e “nada satisfeito(a)”. É importante considerar também que a percepção abstrata do que é democracia varia bastante entre indivíduos (Colen, 2009), o que pode influenciar na resposta da questão de escala de insatisfação democrática. Também, não é ideal utilizar variáveis categóricas em um modelo de regressão, o que é o caso das variáveis independentes do presente trabalho. 
+	É possível que exista endogeneidade na estimação dos resultados, pois as variáveis explicativas também podem ser influenciadas pela variável numérica de escala de satisfação com a democracia. Nesse caso, as estimativas podem não convergir ao parâmetro populacional. 
+	Por fim, a validade na operacionalização da variável dependente apoio à democracia está comprometida, uma vez que está sendo utilizada uma escala numérica de “insatisfação” com a democracia, o que torna a operacionalização imprecisa. 
+	
+## Referências bibliográficas
+
+ACEMOGLU, D.; ROBISON, J. The Narrow Corridor: States, Societies, and the Fate of Liberty. Penguin Press, 2019.
+BERNARDO e RENNÓ (2007). Interpersonal Confidence and civic engagement: a correlational analysis. Psicologia em Pesquisa [online], v.1, n.2, Juiz de Fora, Dez 2007.
+COLEN (2009) Os determinantes do apoio à democracia nos países da América Latina. 2009. 222 f. Tese (Doutorado em Ciência Política) - Universidade Federal de Minas Gerais (UFMG), Belo Horizonte, 2009. 
+FIGUEIREDO et al (2011) O que Fazer e o que Não Fazer com a Regressão: pressupostos e aplicações do modelo linear de Mínimos Quadrados Ordinários (MQO). Revista Política Hoje, Vol. 20, n. 1, 2011
+FIGUEIREDO et al (2011) What is R2 all about? Leviathan – Cadernos de Pesquisa Política, n. 3, pp. 60-68, 2011.
+FIORINA, M. P. (2001) “Parties, Participation, and Representation in America: Old Theories Face New Realities.” American Political Science Association.
+FIORINA, M. P. (2008) “Extreme Voices: A Dark Side of Civic Engagement” 
+FREIRE, Alessandro. Engajamento cívico e capital social: um modelo interativo para o efeito da confiança interpessoal. Opinião Pública [online], v. 20, n. 2, p. 273 - 290, Campinas, Ago 2014. 
+FREIRE, Alessandro de Oliveira Gouveia. Engajamento Cívico: Um Desafio Teórico
+para a Ciência Política Contemporânea In: ENCONTRO ANUAL DA ANPOCS, 35, 2011, Caxambu/MG. 
+KELLSTEDT, Paul M. e WHITTEN, Guy D. (2018). The Fundamentals of Political Science Research. 3rd ed. New York: Cambridge University Press.
+POWER, T. & HUNTER, W. (2019) “Bolsonaro and Brazil's Illiberal Backlash”. Journal of Democracy, Volume 30, Number 1, January 2019, pp. 68-82. 
+PUTNAM D., Robert. (2006) Comunidade e Democracia: a experiência da Itália Moderna. Editora FGV, Rio de Janeiro. 
+RIBEIRO. (2007) Bases da legitimidade democrática no Brasil: adesão a valores e avaliação de desempenho. Opinião Pública [online], v. 13, n. 1, p. 74-96, Campinas, Julho 2007. 
+ROSANVALLON, Pierre. Counter-democracy. Politics in the Age of Distrust. Cambridge: Cambridge University Press, 2008. (Introduction, Part IV “Unpolitical Democracy” e “Conclusion”).
+TOCQUEVILLE, A. (2004) “A Democracia na América”. Martins Fontes, São Paulo. 
+
+
